@@ -18,5 +18,17 @@
   "bugs": {
     "url": "https://github.com/jfives13/bug-free-chainsaw/issues"
   },
-  "homepage": "https://github.com/jfives13/bug-free-chainsaw#readme"
+  "homepage": "https://github.com/jfives13/bug-free-chainsaw#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.11.1",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  }
 }
