@@ -1,11 +1,9 @@
 'use strict';
 
-
 export default class Character {
 	//base class for players and mosters to drrive from. sets basic attributes
 	constructor (options){
 		//options is an object with the defult perameters
-
 
 		let opts = options || {}; 
 		this.name = opts.name || 'Hero';
@@ -17,24 +15,22 @@ export default class Character {
 
 		console.log('New Character Created Called; ' + this.name);
 	}
-	attacks (who, with_what) {
+
+	attacks (who, weapon) {
 		//character will attack another character called who with an item with
-		console.log(`${this.name} attacks ${who.name} with a ${with_what.name}`)
+		console.log(`${this.name} attacks ${who.name} with a ${weapon.name}`)
+
+		let atk_val = 10;
+		atk_val = atk_val + this.atk;
+		atk_val = atk_val + weapon.atk;
+
+		const d20 = Math.floor(Math.random() * 20) + 1;
+		console.log (`attack roll was ${d20} to hit value is ${atk_val}`);
+
+		if (d20 <= atk_val) {
+			console.log (`${this.name} hit ${who.name} with ${weapon.name}`);
+		} else {
+			console.log (`${this.name} misses ${who.name}`);
+		}
 	}
 }
-
-
-/**
-
-let jonah = new Character ({
-	name: 'jonah', 
-	move: 5,
-	atk: 1,
-	def: 0,
-	life: 5,
-	symbol: 'j'
-});
-
-jonah.attacks (goblin, sword)
-
-**/
