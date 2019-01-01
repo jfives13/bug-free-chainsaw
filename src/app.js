@@ -1,5 +1,6 @@
 'use strict';
 
+import Equipment from './lib/equipment'
 import Monster from './lib/monster'
 import Player from './lib/player';
 
@@ -12,6 +13,14 @@ let player = new Player ({
 	life: 5,
 	symbol: 'j'
 });
+
+let sword = new Equipment({
+	name: 'Sword', 
+	atk: 1,
+	dmg: 3,
+	symbol: 'S'
+});
+
 
 //jonah.attacks (goblin, sword)
 
@@ -27,4 +36,9 @@ let goblin = new Monster ({
 global.characters = {
 	goblin,
 	player
+};
+
+
+global.equipment = {
+	sword
 };
