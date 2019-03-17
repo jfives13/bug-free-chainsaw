@@ -3,11 +3,11 @@
 import Character from './character';
 
 export default class Player extends Character {
-	constructor (options){
-		let opts = options || {};
-		super(opts);
+  constructor(options) {
+    const opts = options || {};
+    super(opts);
 
 
-		console.log(this.name);
-	}
+    console.log(this.name);
+  }
 }
