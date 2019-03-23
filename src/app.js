@@ -9,9 +9,19 @@ const player = new Player ({
   name: 'Jonah', 
   move: 5,
   atk: 1,
-  def: 0,
-  life: 5,
+  def: 1,
+  hp: 5,
   symbol: 'j'
+});
+
+// jonah.attacks (goblin, sword)
+const goblin = new Monster ({
+  name: 'Goblin', 
+  move: 5,
+  atk: 1,
+  def: 1,
+  hp: 2,
+  symbol: 'g'
 });
 
 const sword = new Equipment({
@@ -31,7 +41,7 @@ const axe = new Equipment({
 const spear = new Equipment({
   name:'Spear',
   atk: 4,
-  dmg: 1,
+  dmg: 2,
   symbol: 'Sp'
 });
 
@@ -40,17 +50,6 @@ const unlucky_crusher = new Equipment({
   atk: -9,
   dmg: 9,
   symbol: 'Uc'
-});
-
-
-// jonah.attacks (goblin, sword)
-const goblin = new Monster ({
-  name: 'Goblin', 
-  move: 5,
-  atk: 1,
-  def: 0,
-  life: 2,
-  symbol: 'g'
 });
 
 global.characters = {
