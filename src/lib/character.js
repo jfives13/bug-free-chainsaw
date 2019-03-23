@@ -16,9 +16,9 @@ export default class Character {
     console.log('New Character Created Called; ' + this.name);
   }
 
-  attacks(who, weapon) {
-    // character will attack another character called who with an item with
-    console.log(`${this.name} attacks ${who.name} with a ${weapon.name}`)
+  attacks(defender, weapon) {
+    // character will attack another character called defender with a weapon 
+    console.log(`${this.name} attacks ${defender.name} with a ${weapon.name}`)
 
     let to_hit = 10;
     to_hit = to_hit - this.atk;
@@ -28,9 +28,10 @@ export default class Character {
     console.log (`attack roll was ${d20} to hit value is ${to_hit}`);
 
     if (d20 > to_hit) {
-      console.log (`${this.name} hit ${who.name} with ${weapon.name}`);
+      console.log (`${this.name} hit ${defender.name} with ${weapon.name}`);
+      // who.hit(weapon)
     } else {
-      console.log (`${this.name} misses ${who.name}`);
+      console.log (`${this.name} misses ${defender.name}`);
     }
   }
 }
