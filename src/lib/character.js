@@ -1,5 +1,23 @@
 'use strict';
 
+class Slot {
+  // Slot represents a place for equipment on a character
+  constructor(options) {
+    const opts = options || {};
+    this.name = opts.name || 'un-named slot';
+    console.log ('new slot created called' + this.name);
+  }
+
+  equip(item) {
+    // equips an item to a slot
+    console.log (`${item.name} was equipped to ${slot.name}`);
+  }
+  unequip(item) {
+    // equips an item to a slot
+    console.log (`${item.name} was unequipped from ${slot.name}`);
+  }
+}
+
 export default class Character {
   // base class for players and mosters to drrive from. sets basic attributes
   constructor(options) {
@@ -14,7 +32,7 @@ export default class Character {
     this.symbol = opts.symbol || 'X';
     this.dead = false;
 
-    console.log('New character created called; ' + this.name);
+    console.log('New character created called' + this.name);
   }
 
   attacks(defender, weapon) {
