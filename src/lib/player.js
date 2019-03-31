@@ -10,4 +10,8 @@ export default class Player extends Character {
 
     console.log(this.name);
   }
+  die()  {
+    super.die();
+    console.log('You died. x_x')
+  }
 }

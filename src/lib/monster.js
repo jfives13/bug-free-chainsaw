@@ -10,4 +10,8 @@ export default class Monster extends Character {
     
     console.log ('a Monster is created');
   }
+  die() {
+    super.die();
+    console.log (`You killed ${this.name}.`)
+  }
 }
