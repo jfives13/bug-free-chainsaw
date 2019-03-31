@@ -10,11 +10,11 @@ class Slot {
 
   equip(item) {
     // equips an item to a slot
-    console.log (`${item.name} was equipped to ${slot.name}`);
+    console.log (`${item.name} was equipped to ${this.name}`);
   }
   unequip(item) {
     // equips an item to a slot
-    console.log (`${item.name} was unequipped from ${slot.name}`);
+    console.log (`${item.name} was unequipped from ${this.name}`);
   }
 }
 
@@ -31,6 +31,15 @@ export default class Character {
     this.hp = opts.hp || 5; 
     this.symbol = opts.symbol || 'X';
     this.dead = false;
+    this.inventory = {
+      bag: opts.bag || [],
+      head: new Slot({name: 'Head'}),
+      body: new Slot({name: 'Body'}),
+      legs: new Slot({name: 'Legs'}),
+      feet: new Slot({name: 'Feet'}),
+      main_hand: new Slot({name: 'Main Hand'}),
+      off_hand: new Slot({name: 'Off Hand'})
+    };
 
     console.log('New character created called' + this.name);
   }
@@ -74,6 +83,16 @@ export default class Character {
   }
 
   die() {
+  }
+
+  pickup(item)  {
+    // pickup an item
+    console.log(`${this.name} picks up ${item.name}`);
+  }
+
+  drop(item)  {
+    // drop an item
+    console.log(`${this.name} dropped ${item.name}`);
   }
 }
 
