@@ -5,12 +5,12 @@ export default class Character {
   constructor(options) {
     // options is an object with the defult perameters
 
-    const opts = options || {}; 
+    const opts = options || {};
     this.name = opts.name || 'Hero';
     this.move = opts.move || 5;
     this.atk = opts.atk || 1;
     this.def = opts.def || 0;
-    this.hp = opts.hp || 5; 
+    this.hp = opts.hp || 5;
     this.symbol = opts.symbol || 'X';
     this.dead = false;
 
@@ -18,7 +18,7 @@ export default class Character {
   }
 
   attacks(defender, weapon) {
-    // character will attack another character called defender with a weapon 
+    // character will attack another character called defender with a weapon
     console.log(`${this.name} attacks ${defender.name} with a ${weapon.name}`)
 
     let to_hit = 10;
@@ -50,7 +50,7 @@ export default class Character {
     // determine how much life is remaining after an attack
     this.hp = this.hp - damage_points;
     console.log(`Hitpoints remaining are ${this.hp}`);
-    if (this.hp <= 0) { 
+    if (this.hp <= 0) {
       this.die();
     }
   }
