@@ -4,7 +4,8 @@
   "description": "Game for jFives",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "test": "jest src/*",
     "dev": "webpack-dev-server --mode=development"
   },
   "repository": {
