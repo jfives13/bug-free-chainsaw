@@ -4,7 +4,9 @@
   "description": "Game for jFives",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "coveralls": "jest --coverage --coverageReporters=text-lcov | coveralls",
+    "coverage": "jest --coverage",
+    "test": "jest src/*",
     "dev": "webpack-dev-server --mode=development"
   },
   "repository": {
@@ -27,7 +29,9 @@
     "@babel/core": "^7.2.2",
     "@babel/preset-env": "^7.2.3",
     "babel-loader": "^8.0.4",
+    "coveralls": "^3.0.3",
     "eslint": "^5.11.1",
+    "jest": "^24.7.1",
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.14"

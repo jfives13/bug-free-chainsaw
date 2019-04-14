@@ -7,16 +7,16 @@ export default class Equipment {
     // options is an object with the defult perameters
 
 
-    const opts = options || {}; 
+    const opts = options || {};
     this.name = opts.name || 'item';
     this.move = opts.move || 0;
     this.atk = opts.atk || 0 ;
     this.dmg = opts.dmg || 0;
     this.def = opts.def || 0;
-    this.life = opts.hp || 0; 
+    this.hp = opts.hp || 0;
     this.symbol = opts.symbol || 'I';
 
     console.log('New Equipment Created Called Item; ' + this.name);
-  } 
+  }
 }
 
